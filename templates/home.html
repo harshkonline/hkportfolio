@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="gallery">
+          <ul class="images">
+            <li class="show"><img width="450" height="450" src="{{ url_for('static', filename='images/dp.jpg') }}" alt="photo_one" /></li>
+            <li><img width="550" height="450" src="{{ url_for('static', filename='images/dp1.jpg') }}" alt="photo_three" /></li>
+            <li><img width="450" height="550" src="{{ url_for('static', filename='images/dp2.jpg') }}" alt="photo_four" /></li>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <h1>Welcome !!!</h1>
+        <p>
+            Hello!! I am Harshad Kulkarni, a Software Engineering graduate student at San Jose State University.
+I am a Software Engineer with 4 years of diversified experience on web and mobile application development
+with good knowledge of Software development lifecycle. I also have strong understanding of various software development methodologies, techniques and tools.
+ and decent exposure to Agile/Scrum methodology of development.
+
+        </p>
+      </div>
+    </div>
+{% endblock %}

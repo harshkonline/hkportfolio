@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="gallery">
+          <ul class="images">
+            <img width="450" height="450" src="{{ url_for('static', filename='images/exp.png') }}"/>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <h1>Work</h1>
+          <ul>
+            <li>Intel - Software Engineer Intern</li>
+            <li>Accenture - Software Engineering Analyst</li>
+            <li>IGATE - Senior Software Engineer</li>
+          </ul>
+
+      </div>
+    </div>
+{% endblock %}

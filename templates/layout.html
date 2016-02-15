@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Harshad Kulkarni</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/modernizr-1.5.min.js') }}"></script>
+
+    <!-- javascript at the bottom for fast page loading -->
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.sooperfish.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.easing-sooper.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/image_fade.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('ul.sf-menu').sooperfish();
+    });
+    </script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="/"><span class="logo_colour">Harsh's Website</span></a></h1>
+        </div>
+        <p style="float: right; padding-top: 65px;">
+            <a href="https://www.linkedin.com/in/harshadkulkarni1">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="linkedin" />
+            </a>
+        </p>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="/">Home</a></li>
+          <li><a href="experience">Experience</a></li>
+          <li><a href="portfolio">My Portfolio</a>
+            <ul class="drop-down">
+              <li><a href="portfolio#cita">Corporate Income tax automaton</a></li>
+              <li><a href="portfolio#aeb">AE Benefits</a></li>
+              <li><a href="portfolio#lifelens">Lifelens V2</a></li>
+              <li><a href="portfolio#photomate">Photo Mate</a></li>
+              <li><a href="portfolio#smartReceiptEditor">SmartReceiptEdito</a></li>
+              <li><a href="portfolio#watchdog">Watchdog for electronic devices and appliance</a></li>
+            </ul>
+          </li>
+          <li><a href="resume">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+  </div>
+  <p>&nbsp;</p>
+
+</body>
+</html>
